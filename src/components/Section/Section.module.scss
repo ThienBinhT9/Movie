@@ -1,0 +1,42 @@
+.section{
+    margin-bottom: 82px;
+
+    .header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 24px;
+
+        .title{
+            font-size: 25px;
+            color: yellow;
+            letter-spacing: 1px;
+            font-weight: bold;
+
+            @media (max-width:740px) {
+                font-size: 18px;
+            }
+        }
+
+        .btn{
+            font-size: 20px;
+            padding: 6px 16px;
+            border-radius: 20px;
+            border: 2px solid var(--white);
+            background-color: transparent;
+            transition: 0.5s;
+            color: var(--white);
+            cursor: pointer;
+            font-weight: bold;
+
+            @media (max-width:740px) {
+                font-size: 16px;
+            }
+
+            &:hover{
+                background-color: var(--white);
+                color: var(--main-color);
+            }
+        }
+    }
+}

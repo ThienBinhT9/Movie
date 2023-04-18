@@ -1,0 +1,13 @@
+.wrapper{
+
+}
+
+.catalog{
+    margin: 0 auto;
+    margin-bottom: 80px;
+    width: 95%;
+    margin-top: 140px;
+    @media (max-width:740px) {
+        width: 94%;
+    }
+}

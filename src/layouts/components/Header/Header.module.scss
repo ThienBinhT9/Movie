@@ -1,0 +1,129 @@
+.wrapper{
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    transition: all ease 0.5s;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 999;
+
+    @media (max-width:1024px) {
+        height: 6rem;
+    }
+
+}
+
+.shrink{
+    position: fixed;
+    left: 0;
+    right: 0;
+    animation: top ease 0.3s;
+    background-color: #333;
+    border-bottom: 1px solid var(--main-color);
+}
+
+.hide{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top:-100%;
+    animation: bottom ease 0.3s;
+}
+
+
+@keyframes top {
+    from{
+        top: -100%;
+    }
+    to{
+        top: 0;
+    }
+}
+
+@keyframes bottom {
+    from{
+        top: 0;
+    }
+    to{
+        top: -100%;
+    }
+}
+
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+    .logo-and-search{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex: 1;
+
+        .logo{
+        
+            width: 60px;
+            display: flex;
+            align-items: center;
+
+            @media (max-width:1024px) {
+                width: 50px;
+            }
+
+            @media (max-width:600px) {
+                width: 35px;
+            }
+    
+            img{
+                width: 100%;
+                margin-right: 8px;
+            }
+    
+            span{
+                font-size: 2.2rem;
+                font-weight: bold;
+                letter-spacing: 1px;
+                transition: 0.5s;
+                color: var(--white);
+    
+                &:hover{
+                    color: var(--main-color);
+                    cursor: pointer;
+                    transition: 0.5s;
+                }
+            }
+        }
+
+        .search{
+            background-color: transparent;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--white);
+
+            @media (max-width:1024px) {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    
+
+    .actions{
+        padding-left: 12px;
+
+        @media (max-width:600px) {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #333;
+            height: 40px;
+
+            padding-left: 0;
+        }
+    }
+}
